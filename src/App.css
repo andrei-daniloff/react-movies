@@ -1,3 +1,5 @@
+@import "./loader/loader.css";
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.films {
+
+}
+
+.films button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
 }

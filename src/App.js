@@ -1,22 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Genres from "./genres/Genres";
+import {Route, Routes} from "react-router";
+import Films from "./films/Films";
+import NoMatch from "./no-match/NoMatch";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Routes>
+          <Route path="/" exact={true} element={<Genres />} />
+          <Route path="/films/:id" exact={true} element={<Films />} />
+          <Route path="*" element={<NoMatch />}/>
+        </Routes>
       </header>
     </div>
   );
